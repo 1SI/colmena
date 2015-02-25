@@ -33,7 +33,7 @@ public class Colmena {
         for(Limpiadora limpiadora:listaLimpiadoras){
             limpiadora.start();
         }
-        listaNodrizas.add(new Nodriza(5001,1));
+        /*listaNodrizas.add(new Nodriza(5001,1));
         listaNodrizas.add(new Nodriza(5002,2));
         listaNodrizas.add(new Nodriza(5003,3));
         listaNodrizas.add(new Nodriza(5004,4));
@@ -46,7 +46,7 @@ public class Colmena {
         listaZanganos.add(new Zangano(5003,3));
         for(Zangano zangano:listaZanganos){
             zangano.start();
-        }
+        }*/
     }
     
 }
