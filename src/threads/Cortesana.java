@@ -16,15 +16,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Hace el trabajo sucio de la reina, para que la reina pueda seguir atendiendo
+ * a más abejitas. 
  * @author Alejandro S. 
  */
-public class Trabajo extends Thread{
+public class Cortesana extends Thread{
     
     Socket socket;
-    Abeja abeja;
 
-    public Trabajo(Socket socket) {
+    public Cortesana(Socket socket) {
         this.socket = socket;
     }
 
@@ -42,13 +42,13 @@ public class Trabajo extends Thread{
             flujoSalida.writeInt(zona);
             socket.close();
         } catch (IOException ex) {
-            Logger.getLogger(Trabajo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Cortesana.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 salida.close();
                 socket.close();
             } catch (IOException ex) {
-                Logger.getLogger(Trabajo.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Cortesana.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

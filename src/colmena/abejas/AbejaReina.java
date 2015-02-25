@@ -8,7 +8,7 @@ package colmena.abejas;
 import java.net.ServerSocket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import threads.Trabajo;
+import threads.Cortesana;
 
 /**
  *
@@ -21,7 +21,7 @@ public class AbejaReina extends Abeja{
         System.out.println("Soy la abeja reina, estoy en el puerto " + puerto);
         while(true){
             socket = server.accept();
-            Trabajo atenderAbeja = new Trabajo(socket);
+            Cortesana atenderAbeja = new Cortesana(socket);
             atenderAbeja.start();
         }
     }
